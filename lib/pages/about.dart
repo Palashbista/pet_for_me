@@ -7,7 +7,7 @@ class About extends StatelessWidget {
       appBar: AppBar(
         title: Text('PetForMe: About Page'),
       ),
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.lightBlueAccent,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -22,7 +22,7 @@ class About extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Pacifico',
                 fontSize: 40.0,
-                color: Colors.white,
+                color: Colors.deepPurpleAccent,
                 fontWeight: FontWeight.bold,
               ),
             ),

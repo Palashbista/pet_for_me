@@ -7,22 +7,35 @@ import 'package:pet_for_me/pages/settings.dart';
 import 'package:pet_for_me/pages/trivia_quiz.dart';
 import 'package:pet_for_me/pages/vets_available.dart';
 import 'package:pet_for_me/pages/feedback.dart';
+import 'package:pet_for_me/components/themes.dart';
+import 'package:pet_for_me/components/custom_theme.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    CustomTheme(
+      initialThemeKey: MyThemeKeys.LIGHT,
+      child: MyApp(),
+    ),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       title: 'Final Year Project',
-      theme: ThemeData.dark().copyWith(
-        primaryColor: Color(0xFF0A0E21),
-        scaffoldBackgroundColor: Color(0xFF0A0E21),
-        textTheme: TextTheme(
-          headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-        ),
-      ),
+      theme: CustomTheme.of(context),
+//      theme: ThemeData.dark().copyWith(
+//        primaryColor: Color(0xFF0A0E21),
+//        scaffoldBackgroundColor: Color(0xFF0A0E21),
+//        textTheme: TextTheme(
+//          headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+//          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+//          body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+//        ),
+//      ),
       home: HomePage(),
-      routes: <String,WidgetBuilder>{
+      routes: <String, WidgetBuilder>{
         "/HomePage": (BuildContext context) => HomePage(),
         "/BreedInfo": (BuildContext context) => BreedInfo(),
         "/Favorites": (BuildContext context) => Favorites(),
@@ -32,6 +45,6 @@ void main() {
         "/SendFeedback": (BuildContext context) => SendFeedback(),
         "/Settings": (BuildContext context) => Settings(),
       },
-    ),
-  );
+    );
+  }
 }
