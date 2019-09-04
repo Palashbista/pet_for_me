@@ -15,7 +15,7 @@ class About extends StatelessWidget {
             CircleAvatar(
               radius: 50.0,
               backgroundColor: Colors.white30,
-              backgroundImage: AssetImage('assets/images/dog.jpg'),
+              backgroundImage: AssetImage('assets/images/palash.jpg'),
             ),
             Text(
               'Palash Bista',

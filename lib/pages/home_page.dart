@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pet_for_me/components/my_drawer.dart';
 import 'package:pet_for_me/components/themes.dart';
 import 'package:pet_for_me/components/custom_theme.dart';
-import 'package:pet_for_me/pages/settings.dart';
-
-
-Color cc=Settings().getThemeColor();
+import 'home_info_dependency_pages/adoption_list.dart';
 
 
 
@@ -27,14 +24,7 @@ class _HomePageState extends State<HomePage> {
         title: Text('PetForMe'),
       ),
       drawer: MyDrawer(),
-      body: Center(
-        child: Text(
-          'Welcome to PetForMe App',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontWeight: FontWeight.w900, fontSize: 35.0),
-        ),
-      )
-      ,
+      body: AdoptionList(),
     );
   }
 }

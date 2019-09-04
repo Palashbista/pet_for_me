@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
+import 'breed_info_dependency_pages/breed_list.dart';
 
-class BreedInfo extends StatelessWidget {
+
+
+class GridViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('PetForMe: Pets Available Page'),
-      ),
-      body: Center(
-        child: Text(
-          'Welcome to Breed info Page',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontWeight: FontWeight.w900, fontSize: 35.0),
+        appBar: AppBar(
+          title: Text('Breed Information'),
         ),
-      ),
-    );
+        body: BreedList(),
+      );
+
   }
 }
+

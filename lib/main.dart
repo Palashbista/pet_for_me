@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:pet_for_me/pages/about.dart';
 import 'package:pet_for_me/pages/favorites.dart';
@@ -9,6 +11,11 @@ import 'package:pet_for_me/pages/vets_available.dart';
 import 'package:pet_for_me/pages/feedback.dart';
 import 'package:pet_for_me/components/themes.dart';
 import 'package:pet_for_me/components/custom_theme.dart';
+import 'package:pet_for_me/fetchHttpData.dart' as http;
+
+import 'fetchHttpData.dart';
+
+
 
 void main() {
   runApp(
@@ -20,10 +27,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+//    print("tst");
+//    http.test();
     return MaterialApp(
       title: 'Final Year Project',
+      navigatorKey: key,
       theme: CustomTheme.of(context),
 //      theme: ThemeData.dark().copyWith(
 //        primaryColor: Color(0xFF0A0E21),
@@ -34,17 +45,22 @@ class MyApp extends StatelessWidget {
 //          body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
 //        ),
 //      ),
-      home: HomePage(),
+      home:
+      HomePage(),
       routes: <String, WidgetBuilder>{
         "/HomePage": (BuildContext context) => HomePage(),
-        "/BreedInfo": (BuildContext context) => BreedInfo(),
+        "/BreedInfo": (BuildContext context) => GridViewPage(),
         "/Favorites": (BuildContext context) => Favorites(),
         "/VetsAvailable": (BuildContext context) => VetsAvailable(),
         "/TriviaQuiz": (BuildContext context) => TriviaQuiz(),
         "/About": (BuildContext context) => About(),
-        "/SendFeedback": (BuildContext context) => SendFeedback(),
+        "/SendFeedback": (BuildContext context) => FeedbackPage(),
         "/Settings": (BuildContext context) => Settings(),
       },
     );
   }
 }
+
+
+
+

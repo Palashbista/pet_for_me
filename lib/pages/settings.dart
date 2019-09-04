@@ -13,11 +13,6 @@ class Settings extends StatelessWidget {
     );
   }
 
-  CustomSetting CS = CustomSetting();
-
-  Color getThemeColor() {
-    return CS.getThemeColor();
-  }
 }
 
 class CustomSetting extends StatefulWidget {
@@ -28,13 +23,6 @@ class CustomSetting extends StatefulWidget {
   @override
   CustomSettingState createState() => CustomSettingState();
 
-  CustomSettingState CusC = CustomSettingState();
-
-  Color getThemeColor() {
-    // print("is working");
-    //  print(CusC.customThemeColor);
-    return CusC.customThemeColor;
-  }
 }
 
 class CustomSettingState extends State<CustomSetting> {

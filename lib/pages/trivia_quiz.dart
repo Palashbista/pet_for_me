@@ -63,7 +63,7 @@ class _QuizPageState extends State<QuizPage> {
           buttons: [
             DialogButton(
               child: Text(
-                "Cool",
+                "Go to Home Page",
                 style: TextStyle(color: Colors.white, fontSize: 20.0),
               ),
               onPressed: () {

@@ -1,15 +1,12 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:pet_for_me/pages/trivia_quiz.dart';
-
 import 'constants.dart';
 import 'drawer_list_tile.dart';
 
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({
-    Key key,
-  }) : super(key: key);
+
+  final ValueChanged<String> updateValue;
+
+  const MyDrawer({Key key, @required this.updateValue}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,23 +49,26 @@ class MyDrawer extends StatelessWidget {
             drawerListText: 'Favorites',
             drawerListIcons: Icons.add_a_photo,
             drawerListOnTap: () {
+              if (updateValue != null) {
+                print("Favorite list");
+              }
               Navigator.of(context).pushNamed("/Favorites");
             },
           ),
-          Divider(),
-          DrawerListTile(
-            drawerListText: 'Available vets',
-            drawerListIcons: Icons.dock,
-            drawerListOnTap: () {
-              Navigator.of(context).pushNamed("/VetsAvailable");
-            },
-          ),
+//          Divider(),
+//          DrawerListTile(
+//            drawerListText: 'Available vets',
+//            drawerListIcons: Icons.dock,
+//            drawerListOnTap: () {
+//              Navigator.of(context).pushNamed("/VetsAvailable");
+//            },
+//          ),
           Divider(),
           DrawerListTile(
             drawerListText: 'Trivia Quiz',
             drawerListIcons: Icons.print,
             drawerListOnTap: () {
-            Navigator.of(context).pushNamed("/TriviaQuiz");
+              Navigator.of(context).pushNamed("/TriviaQuiz");
             },
           ),
           Divider(),
