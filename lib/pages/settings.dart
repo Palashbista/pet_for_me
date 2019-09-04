@@ -13,6 +13,7 @@ class Settings extends StatelessWidget {
     );
   }
 
+<<<<<<< HEAD
 }
 
 class CustomSetting extends StatefulWidget {
@@ -23,11 +24,34 @@ class CustomSetting extends StatefulWidget {
   @override
   CustomSettingState createState() => CustomSettingState();
 
+=======
+  CustomSetting CS = CustomSetting();
+
+  Color getThemeColor() {
+    return CS.getThemeColor();
+  }
+}
+
+class CustomSetting extends StatefulWidget {
+  @override
+  CustomSettingState createState() => CustomSettingState();
+
+  CustomSettingState CusC = CustomSettingState();
+
+  Color getThemeColor() {
+    // print("is working");
+    //  print(CusC.customThemeColor);
+    return CusC.customThemeColor;
+  }
+>>>>>>> 97a3667d76ddee1201b94c7bcf06f722eacbeff7
 }
 
 class CustomSettingState extends State<CustomSetting> {
   bool isSwitched = false;
+<<<<<<< HEAD
   bool isBright = false;
+=======
+>>>>>>> 97a3667d76ddee1201b94c7bcf06f722eacbeff7
   Color customThemeColor = Colors.black;
 
   @override
@@ -44,6 +68,7 @@ class CustomSettingState extends State<CustomSetting> {
         ),
         Container(
           margin: EdgeInsets.all(50.0),
+<<<<<<< HEAD
           child: Column(
             children: <Widget>[
               Row(
@@ -93,6 +118,29 @@ class CustomSettingState extends State<CustomSetting> {
                     activeColor: Colors.green,
                   ),
                 ],
+=======
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                'Theme Change',
+                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 25.0),
+              ),
+              Switch(
+                value: isSwitched,
+                onChanged: (value) {
+                  setState(() {
+                    isSwitched = value;
+                    print("color change");
+                    isSwitched
+                        ? customThemeColor = Colors.pink
+                        : customThemeColor = Colors.black;
+                    print(customThemeColor);
+                  });
+                },
+                activeTrackColor: Colors.lightGreenAccent,
+                activeColor: Colors.green,
+>>>>>>> 97a3667d76ddee1201b94c7bcf06f722eacbeff7
               ),
             ],
           ),

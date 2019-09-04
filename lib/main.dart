@@ -17,7 +17,20 @@ import 'fetchHttpData.dart';
 
 
 
+//ThemeData customTheme = ThemeData.dark().copyWith(
+//  primaryColor: Color(0xFF0A0E21),
+//  scaffoldBackgroundColor: Color(0xFF0A0E21),
+//  textTheme: TextTheme(
+//    headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+//    title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+//    body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+//  )
+//);
+//Color switchColor = Colors.pink;
+//Color switchColor = Settings().getThemeColor();
+
 void main() {
+<<<<<<< HEAD
   runApp(
     CustomTheme(
       initialThemeKey: MyThemeKeys.LIGHT,
@@ -47,6 +60,27 @@ class MyApp extends StatelessWidget {
 //      ),
       home:
       HomePage(),
+=======
+  runApp(PetForMe());
+}
+
+class PetForMe extends StatelessWidget {
+
+  
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Final Year Project',
+      theme: ThemeData.dark().copyWith(
+          primaryColor: Color(0xFF0A0E21),
+          scaffoldBackgroundColor: Colors.pink,
+          textTheme: TextTheme(
+            headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+            title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+            body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+          )),
+      home: HomePage(),
+>>>>>>> 97a3667d76ddee1201b94c7bcf06f722eacbeff7
       routes: <String, WidgetBuilder>{
         "/HomePage": (BuildContext context) => HomePage(),
         "/BreedInfo": (BuildContext context) => GridViewPage(),
